@@ -17,6 +17,8 @@ return new class extends Migration
             $table->foreignId('habit_id')->constrained('habits')->onDelete('cascade');
             $table->date('completed_at');
             $table->timestamps();
+
+            $table->unique(['user_id', 'habit_id', 'completed_at']);
         });
     }
 
