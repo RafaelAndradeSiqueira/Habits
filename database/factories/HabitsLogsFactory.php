@@ -17,7 +17,7 @@ class HabitsLogsFactory extends Factory
     public function definition(): array
     {
         return [
-            'habit_id' => '1',
+            'habits_id' => '1',
             'user_id' => '1',
             'completed_at' => fake()->dateTimeThisMonth(),
         ];

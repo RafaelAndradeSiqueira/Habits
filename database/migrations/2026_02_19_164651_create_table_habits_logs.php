@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('habits_logs', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('habit_id')->constrained('habits')->onDelete('cascade');
+            $table->foreignId('habits_id')->constrained('habits')->onDelete('cascade');
             $table->date('completed_at');
             $table->timestamps();
 
-            $table->unique(['user_id', 'habit_id', 'completed_at']);
+            $table->unique(['user_id', 'habits_id', 'completed_at']);
         });
     }
 

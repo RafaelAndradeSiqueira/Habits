@@ -19,7 +19,7 @@ class HabitsFactory extends Factory
     {
         return [
             'user_id' => '1',
-            'name' => fake()->word(),
+            'name' => 'exercícios',
         ];
     }
 }

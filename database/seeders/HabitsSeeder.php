@@ -12,6 +12,6 @@ class HabitsSeeder extends Seeder
      */
     public function run(): void
     {
-        Habits::factory(2)->create();
+        Habits::factory(1)->create();
     }
 }

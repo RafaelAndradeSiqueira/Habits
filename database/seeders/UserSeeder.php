@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
             'name' => 'Rafael',
             'email' => 'rafaz10000@gmail.com',
             'email_verified_at' => now(),
-            'password' => '123456',
+            'password' => '12345678',
             'remember_token' => null,
         ]);
     }
