@@ -21,7 +21,7 @@ class LoginController extends Controller
 
            $request->session()->regenerate();
 
-           return redirect()->intended('/dashboard');
+          return redirect()->intended(route('habits.index'));
        }
 
         return back()->withErrors([

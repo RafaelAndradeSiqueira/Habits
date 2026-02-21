@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   app:
     build: .
@@ -5,7 +7,7 @@ services:
     volumes:
       - ./:/var/www
     ports:
-      - "8080:8000"
+      - "8000:8000"
     depends_on:
       - db
     command: php artisan serve --host=0.0.0.0 --port=8000
@@ -27,7 +29,6 @@ services:
       MYSQL_DATABASE: habits
       MYSQL_USER: laravel
       MYSQL_PASSWORD: laravel
-      MYSQL_ROOT_PASSWORD: root
     ports:
       - "3307:3306"
     volumes:

@@ -4,7 +4,7 @@
 ])
 @php
     $selectedYear = $year ?? now()->year;
-    $weeks = App\Models\Habit::generateYearGrid($selectedYear);
+    $weeks = App\Models\Habits::generateYearGrid($selectedYear);
 @endphp
 
 <div class="mb-6">
@@ -13,7 +13,7 @@
   </h2>
 
   {{-- GRID --}}
-  <div class="bg-orange-50 p-2 habit-shadow-lg overflow-x-auto">
+  <div class="bg-orange-50 p-2 habit-shadow-lg">
     <div class="flex gap-1 justify-between w-full">
 
       @foreach($weeks as $week)

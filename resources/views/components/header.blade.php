@@ -20,6 +20,16 @@
     {{-- NAV --}}
     <div class="flex gap-2 items-center">
       @auth
+        <div class="flex gap-2">
+          <a href="{{ route('habits.index') }}" class="p-1 px-2 habit-shadow-lg habit-btn">
+            Dashboard
+          </a>
+
+          <a href="{{ route('habits.create') }}" class="p-1 px-2 habit-shadow-lg bg-habit-orange habit-btn">
+            Cadastrar Hábito
+          </a>
+        </div>
+
         <form
           class="inline"
           action="{{route('logout')}}"
